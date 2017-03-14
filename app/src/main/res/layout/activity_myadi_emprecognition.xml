@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/asl_scrollview"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MyAdi_EmpGreetActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Page title -->
+            <ImageView
+                android:id="@+id/myer_emprcog_Iv"
+                android:layout_width="120sp"
+                android:layout_height="90sp"
+                android:padding="1sp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/empofmonth"/>
+            <TextView
+                android:id="@+id/myer_emprcog_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Employee of the Month! "
+                android:textSize="22sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#551A8B"
+                android:layout_below="@id/myer_emprcog_Iv"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/myer_mdMsg_Tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:text="Dear High Performers,\nI congratulate you on your superior performance and valuable contribution to our business and brand. \n\nBest Wishes!\nParas Bhandari\n(MD, Adishwar India)"
+            android:textColor="@color/red"
+            android:textSize="18sp"/>
+        <RelativeLayout
+            android:id="@+id/myer_awardee1_Rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp">
+
+            <!-- Page title -->
+            <com.adishwarestore.storesalesassistant.UrlImageView
+                android:id="@+id/myer_emp1_UIv"
+                android:layout_width="160dp"
+                android:layout_height="110dp"
+                android:background="@color/purplishLight"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="2dp"
+                android:padding="5sp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:id="@+id/myer_emp1_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="#551A8B"
+                android:layout_below="@id/myer_emp1_UIv"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/myer_awardee2_Rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:layout_marginBottom="12sp">
+
+            <!-- Page title -->
+            <com.adishwarestore.storesalesassistant.UrlImageView
+                android:id="@+id/myer_emp2_UIv"
+                android:layout_width="160dp"
+                android:layout_height="110dp"
+                android:background="@color/purplishLight"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="2dp"
+                android:padding="5sp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:id="@+id/myer_emp2_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="#551A8B"
+                android:layout_below="@id/myer_emp2_UIv"/>
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/myer_progress_Pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:padding="10sp"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/purplishDark"
+            style="@style/Widget.AppCompat.ProgressBar"/>
+    </LinearLayout>
+</ScrollView>

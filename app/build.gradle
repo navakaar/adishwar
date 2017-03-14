@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "com.adishwarestore.storesalesassistant"
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    repositories {
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
+    dexOptions {
+        javaMaxHeapSize "2048M"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:24.1.1'
+    //compile 'com.google.android.gms:play-services:10.0.1'
+    // Instead of adding the entire google play-services lib, add only the components required
+    // refer https://developers.google.com/android/guides/setup#split (table 1)
+    compile 'com.google.android.gms:play-services-location:10.0.1'
+    compile 'com.android.support:recyclerview-v7:24.1.1'
+    compile 'com.android.support:cardview-v7:24.0.0'
+
+    
+    compile files('libs/jackson-core-2.7.0.jar')                // for JSON parsing
+    compile files('libs/jackson-annotations-2.7.0.jar')
+    compile files('libs/jackson-databind-2.7.0.jar')
+
+    compile 'com.github.PhilJay:MPAndroidChart:v2.0.9'          // for showing bar graphs (MyAdi>MyPerformance)
+    compile 'me.dm7.barcodescanner:zxing:1.9'                   // for QR Code Scan (MyAdi>MyAttendance)
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'   // for displaying GIF image (MyAdi>EmployeeGreetings)
+}

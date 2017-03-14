@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/al_loginCardView"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/tools"
+        android:layout_margin="10sp"
+        app:cardConerRadius="4dp"
+        app:cardElevation="6dp"
+        android:backgroundTint="@color/purplishLight"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/purplishLight">
+            <ImageView
+                android:id="@+id/al_adishwarlogo_Iv"
+                android:layout_width="125sp"
+                android:layout_height="60sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="25sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_columnSpan="4"
+                android:src="@drawable/adishwarwavelogo"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/al_usernameWrapper_Til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_marginTop="30sp"
+                android:textColorHint="@color/purplishDark"
+                android:layout_gravity="center_horizontal"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <EditText
+                    android:id="@+id/al_user_Tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:textSize="18sp"
+                    android:hint="Registered Mobile Number"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/al_passwordWrapper_Til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_below="@id/al_usernameWrapper_Til"
+                android:layout_marginTop="1sp"
+                android:textColorHint="@color/purplishDark"
+                android:layout_gravity="center_horizontal"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <EditText
+                    android:id="@+id/al_pin_Tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:textSize="18sp"
+                    android:hint="4-digit PIN"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/al_loginBtn"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/purplishDark"
+                android:textColor="@color/purplishLight"
+                android:text="Login" />
+
+            <TextView
+                android:id="@+id/al_forgotPwd_Tv"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="10sp"
+                android:layout_marginRight="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Forgot Password?"
+                android:textSize="13sp"
+                android:textColor="@color/bluegray" />
+
+            <TextView
+                android:id="@+id/al_tnc_Tv"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/login_disclaimer"
+                android:textSize="8sp"
+                android:textColor="@color/bluegray" />
+
+            <TextView
+                android:id="@+id/al_loginErr_Tv"
+                android:layout_marginTop="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:textColor="@color/red" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

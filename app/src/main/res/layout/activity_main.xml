@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/am_adishwarlogo_Iv"
+            android:layout_width="125sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="3sp"
+            android:layout_marginBottom="5sp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/adishwarwavelogo"/>
+
+        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_main_Gl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:alignmentMode="alignBounds"
+            android:columnOrderPreserved="false"
+            android:columnCount="4">
+
+
+
+            <!-- TILE1: Product Price / Offers -->
+            <!-- TILE2: My Adishwar -->
+            <ImageView
+                android:id="@+id/am_product_details_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:padding="5sp"
+                android:elevation="10sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/price_offer"
+                android:baselineAlignBottom="true"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"/>
+            <ImageView
+                android:id="@+id/am_myadishwar_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:layout_marginTop="30sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/myadishwar"
+                android:layout_columnSpan="2"
+                android:baselineAlignBottom="true"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/am_product_details_Tv"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Product Price / Offers"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
+                android:layout_columnSpan="2"/>
+            <TextView
+                android:id="@+id/am_emp_adda_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="My Adishwar"
+                android:layout_columnSpan="2"/>
+
+
+            <!-- TILE3: Visitor Log -->
+            <!-- TILE4: Sales Log -->
+            <ImageView
+                android:id="@+id/am_visit_log_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:layout_marginTop="30sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/visitor_log"
+                android:layout_columnSpan="2"
+                android:baselineAlignBottom="true"
+                android:layout_gravity="center_horizontal"/>
+            <ImageView
+                android:id="@+id/am_sales_log_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:layout_marginTop="30sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/sales_log"
+                android:layout_columnSpan="2"
+                android:baselineAlignBottom="true"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/am_visit_log_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Visitor Log"
+                android:layout_columnSpan="2"/>
+            <TextView
+                android:id="@+id/am_sales_log_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Sales Log"
+                android:layout_columnSpan="2"/>
+
+
+            <!-- TILE5: Stock Check-->
+            <!-- TILE6: Latest News -->
+            <ImageView
+                android:id="@+id/am_stock_check_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:layout_marginTop="30sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/stock_check"
+                android:layout_columnSpan="2"
+                android:baselineAlignBottom="true"
+                android:layout_gravity="center_horizontal"/>
+            <ImageView
+                android:id="@+id/am_news_offers_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/news"
+                android:baselineAlignBottom="true"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/am_stock_check_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Stock Check"
+                android:layout_columnSpan="2"/>
+            <TextView
+                android:id="@+id/am_news_offers_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Latest News"
+                android:layout_columnSpan="2"/>
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

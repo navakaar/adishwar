@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:paddingBottom="15sp">
+    <ImageView
+        android:id="@+id/nlr_newsItem_pic_Iv"
+        android:layout_width="100sp"
+        android:layout_height="match_parent"
+        android:paddingRight="4sp"
+        android:src="@drawable/special_offers"/>
+    <TextView
+        android:id="@+id/nlr_newsItem_headline_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nlr_newsItem_pic_Iv"
+        android:text="Headline"
+        android:layout_marginBottom="4sp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/nlr_newsItem_body_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nlr_newsItem_pic_Iv"
+        android:layout_below="@id/nlr_newsItem_headline_Tv"
+        android:text="Body Body Body \n Body "
+        android:textSize="12sp"/>
+</RelativeLayout>

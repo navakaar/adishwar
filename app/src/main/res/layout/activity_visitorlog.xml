@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purplishLight"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".ProductDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Page title -->
+        <ImageView
+            android:id="@+id/avl_visit_log_Iv"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:padding="5sp"
+            android:elevation="5sp"
+            android:fadingEdgeLength="5sp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/visitor_log"/>
+        <TextView
+            android:id="@+id/avl_visitor_log_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visitor Log "
+            android:textSize="22sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#551A8B"
+            android:layout_below="@id/avl_visit_log_Iv"/>
+    </RelativeLayout>
+
+    <!-- Fragment Container for replacing appropriate Fragment -->
+    <!-- for each step of Visitor Log Activity -->
+    <FrameLayout
+        android:id="@+id/avl_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:id="@+id/avl_progress_Pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10sp"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/purplishDark"
+        style="@style/Widget.AppCompat.ProgressBar"/>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#BEEE62</color>
+    <color name="limegreen">#32CD32</color>
+    <color name="limegreen2">#c6ff00</color>
+    <color name="purplishDark">#724889</color>
+    <color name="purplishLight">#E6E0EC</color>
+    <color name="year">#999999</color>
+    <color name="title">#222222</color>
+    <color name="bananayellow">#FFE332</color>
+    <color name="blue">#4c4cff</color>
+    <color name="bluegray">#78909c</color>
+</resources>

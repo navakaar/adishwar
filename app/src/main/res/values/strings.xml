@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Store Sales Assistant</string>
+
+    <string name="prodcat_prompt">Category : </string>
+    <string name="product_prompt">Product : </string>
+    <string name="prodcod_prompt">Product Code : </string>
+
+    <!-- Radion button options for Product Category Selection -->
+    <string name="radio_NA">ALL</string>
+    <string name="radio_CE">CE</string>
+    <string name="radio_CA">CA</string>
+    <string name="radio_DAP">DAP</string>
+    <string name="radio_OTH">OTHER</string>
+
+
+    <!-- Spinner options for Product Selection -->
+    <string-array name="NA_prodList">
+        <item>ALL</item>
+    </string-array>
+    <string-array name="CE_prodList">
+        <item>Select One</item>
+        <item>Audio Player</item>
+        <item>DVD Player</item>
+        <item>Home Theater</item>
+        <item>Speakers</item>
+        <item>Television</item>
+    </string-array>
+    <string-array name="CA_prodList">
+        <item>Select One</item>
+        <item>Air Conditioner</item>
+        <item>Microwave</item>
+        <item>Oven</item>
+        <item>Refrigerator</item>
+        <item>Washing Machine</item>
+
+    </string-array>
+    <string-array name="DAP_prodList">
+        <item>Select One</item>
+        <item>Geyser</item>
+        <item>Hair Dryer</item>
+        <item>Iron</item>
+        <item>Sandwich Maker</item>
+        <item>Toaster</item>
+        <item>Water Purifier</item>
+    </string-array>
+    <string-array name="OTH_prodList">
+        <item>N/A</item>
+    </string-array>
+
+    <string name="VisitorName_hint">Visitor Name</string>
+    <string name="VisitorPhNo_hint">Visitor Mobile Number</string>
+
+    <string-array name="salutationList">
+        <item>Mr.</item>
+        <item>Ms.</item>
+    </string-array>
+
+    <string name="login_disclaimer">By logging in, you agree to Adishwar\'s <a href="http://www.adishwarestore.com/">Terms &amp; Conditions</a> and <a href="http://www.adishwarestore.com/">Privary Policy</a> for the usage of this App</string>
+</resources>

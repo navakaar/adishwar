@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Page title -->
+            <ImageView
+                android:id="@+id/amy_myadishwar_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/myadishwar"/>
+            <TextView
+                android:id="@+id/amy_myadishwar_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Adishwar "
+                android:textSize="22sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#551A8B"
+                android:layout_below="@id/amy_myadishwar_Iv"/>
+        </RelativeLayout>
+
+
+        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_main_Gl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:alignmentMode="alignBounds"
+            android:columnOrderPreserved="false"
+            android:columnCount="4">
+
+
+
+            <!-- TILE1: QR Code based My Attendance -->
+            <!-- TILE2: My Performance -->
+            <ImageView
+                android:id="@+id/amy_qr_myattendance_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:padding="5sp"
+                android:elevation="10sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/qr_attendance"
+                android:baselineAlignBottom="true"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"/>
+            <ImageView
+                android:id="@+id/amy_myperformance_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/performance"
+                android:baselineAlignBottom="true"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/amy_myattendance_Tv"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="My Attendance"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
+                android:layout_columnSpan="2"/>
+            <TextView
+                android:id="@+id/amy_myperformance_Tv"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
+                android:text="My Performance"
+                android:layout_columnSpan="2"/>
+
+
+            <!-- TILE3: Employee of the Month -->
+            <!-- TILE4: Store of the Month -->
+            <ImageView
+                android:id="@+id/amy_emprecog_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:layout_marginTop="30sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/empofmonth"
+                android:layout_columnSpan="2"
+                android:baselineAlignBottom="true"
+                android:layout_gravity="center_horizontal"/>
+            <ImageView
+                android:id="@+id/amy_storerecog_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:layout_marginTop="30sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/storeofmonth"
+                android:layout_columnSpan="2"
+                android:baselineAlignBottom="true"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/amy_emprecog_Tv"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
+                android:text="Employee Recognition"
+                android:layout_columnSpan="2"/>
+            <TextView
+                android:id="@+id/amy_storerecog_Tv"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
+                android:text="Store Recognition"
+                android:layout_columnSpan="2"/>
+
+
+            <!-- TILE5: Best Sellers -->
+            <!-- TILE6: Employee Celebrations -->
+            <!--ImageView
+                android:id="@+id/amy_bestsellers_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:layout_marginTop="30sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/bestseller"
+                android:layout_columnSpan="2"
+                android:baselineAlignBottom="true"
+                android:layout_gravity="center_horizontal"/-->
+            <ImageView
+                android:id="@+id/amy_empgreet_Iv"
+                android:layout_width="120sp"
+                android:layout_height="70sp"
+                android:layout_marginTop="30sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:src="@drawable/bouquet"
+                android:layout_columnSpan="4"
+                android:baselineAlignBottom="true"
+                android:layout_gravity="center_horizontal"/>
+            <!--TextView
+                android:id="@+id/amy_bestsellers_Tv"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
+                android:text="Our Best Sellers"
+                android:layout_columnSpan="2"/-->
+            <TextView
+                android:id="@+id/amy_empgreet_Tv"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
+                android:text="Adishwar Greetings"
+                android:layout_columnSpan="4"/>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

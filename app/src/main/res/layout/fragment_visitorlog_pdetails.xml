@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:fitsSystemWindows="true"
+        tools:context=".VisitorLogPDetailsFragment">
+
+        <TextView
+            android:id="@+id/fvlpd_proddetails_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="5sp"
+            android:textColor="#551A8B"
+            android:textSize="18sp"
+            android:text="Product(s) Interested :"/>
+
+        <!-- Product Category -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="8sp">
+
+            <RadioGroup
+                android:id="@+id/fvlpd_ProdCat_RadioGrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="true">
+                <RadioButton
+                    android:id="@+id/fvlpd_CE_RadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_CE"
+                    android:buttonTint="@color/purplishDark"/>
+                <RadioButton
+                    android:id="@+id/fvlpd_CA_RadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_CA"
+                    android:buttonTint="@color/purplishDark"/>
+                <RadioButton
+                    android:id="@+id/fvlpd_DAP_RadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_DAP"
+                    android:buttonTint="@color/purplishDark"/>
+                <RadioButton
+                    android:id="@+id/fvlpd_OTH_RadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_OTH"
+                    android:buttonTint="@color/purplishDark"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+        <!-- Product Type -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="12sp">
+            <TextView
+                android:id="@+id/fvlpd_prodList_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product :"
+                android:textSize="14sp"/>
+            <Spinner
+                android:id="@+id/fvlpd_prodList_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:prompt="@string/product_prompt"
+                android:layout_alignBaseline="@id/fvlpd_prodList_Tv"
+                android:layout_toRightOf="@id/fvlpd_prodList_Tv" />
+        </RelativeLayout>
+
+        <!-- Product Code -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="12sp">
+            <TextView
+                android:id="@+id/fvlpd_prodcod_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Code(s)/Info :"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/fvlpd_prodcod_Et"
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:maxLength="100"
+                android:inputType="textImeMultiLine|textCapSentences"
+                android:lines="2"
+                android:maxLines="4"
+                android:layout_marginTop="3sp"
+                android:padding="5sp"
+                android:gravity="start"
+                android:background="@drawable/edittext_border"
+                android:imeOptions="actionDone"
+                android:layout_below="@id/fvlpd_prodcod_Tv"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/fvlpd_next_Btn"
+            android:layout_width="90sp"
+            android:layout_height="35sp"
+            android:layout_marginTop="20sp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/purplishDark"
+            android:textColor="@color/purplishLight"
+            android:text="NEXT"/>
+
+        <TextView
+            android:id="@+id/fvlpd_stepcount_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="5sp"
+            android:layout_gravity="end"
+            android:text="... Step 2 Of 3 "/>
+    </LinearLayout>
+</ScrollView>

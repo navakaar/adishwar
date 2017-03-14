@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/asl_scrollview"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purplishLight"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MyAdi_MyPerformanceActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <!-- Page title -->
+                <ImageView
+                    android:id="@+id/myamp_perf_Iv"
+                    android:layout_width="90sp"
+                    android:layout_height="80sp"
+                    android:padding="1sp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/performance"/>
+                <TextView
+                    android:id="@+id/myamp_perf_Tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Performance "
+                    android:textSize="22sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#551A8B"
+                    android:layout_below="@id/myamp_perf_Iv"/>
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20sp" />
+
+        <!-- Perforamance Status: Visitor Log -->
+        <TextView
+            android:id="@+id/myamp_vperfstat_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visitors Attended :"
+            android:textColor="@color/purplishDark"/>
+
+        <!-- Bar chart -->
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="300sp"
+            android:layout_height="200sp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin_small"
+            android:paddingBottom="@dimen/activity_vertical_margin_small"
+            tools:context=".MyAdi_MyPerformanceActivity">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/myamp_vperfstat_Barchart"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+        </RelativeLayout>
+
+        <!-- Perforamance Status: Sales logged -->
+        <TextView
+            android:id="@+id/myamp_sperfstat_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sales Logged :"/>
+
+        <!-- Bar chart -->
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="310sp"
+            android:layout_height="200sp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin_small"
+            android:paddingBottom="@dimen/activity_vertical_margin_small"
+            tools:context=".MyAdi_MyPerformanceActivity">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/myamp_sperfstat_Barchart"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"/>
+        </RelativeLayout>
+</LinearLayout>
+    </ScrollView>
+

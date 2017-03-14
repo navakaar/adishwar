@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/asl_scrollview"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purplishLight"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context=".MyAdi_EmpRecognition">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Page title -->
+            <ImageView
+                android:id="@+id/myag_greet_Iv"
+                android:layout_width="120sp"
+                android:layout_height="90sp"
+                android:padding="1sp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/bouquet"/>
+            <TextView
+                android:id="@+id/myag_greet_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adishwar Greetings! "
+                android:textSize="22sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#551A8B"
+                android:layout_below="@id/myag_greet_Iv"/>
+        </RelativeLayout>
+        <!--TextView
+            android:id="@+id/myag_birthdaytitle_Tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Birthdays This Week"
+            android:layout_marginTop="12sp"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/-->
+        <pl.droidsonroids.gif.GifTextView
+            android:layout_width="200sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:layout_gravity="start"
+            android:background="@drawable/happybirthdayanimated"
+            />
+
+        <LinearLayout
+            android:id="@+id/myag_birthdaybakra_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <!-- Sample CircularTextView -->
+            <!--com.adishwarestore.storesalesassistant.CircularTextView
+                android:id="@+id/myag_birthdaybakra_CTv"
+                android:layout_width="150sp"
+                android:layout_height="100sp"
+                android:layout_marginTop="13sp"
+                android:layout_marginBottom="5sp"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:padding="8dp" /-->
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/myag_progress_Pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:padding="10sp"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/purplishDark"
+            style="@style/Widget.AppCompat.ProgressBar"/>
+
+
+    </LinearLayout>
+</ScrollView>

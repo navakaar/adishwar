@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myaa_ScrollView01"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MyAdi_MyAttendanceActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Page title -->
+        <ImageView
+            android:id="@+id/myaa_attend_Iv"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:padding="1sp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/qr_attendance"/>
+        <TextView
+            android:id="@+id/myaa_attend_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Attendance "
+            android:textSize="22sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#551A8B"
+            android:layout_below="@id/myaa_attend_Iv"/>
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20sp" />
+
+    <!-- Prompt for Attendance Inputs Confirmation -->
+    <TextView
+        android:id="@+id/myaa_atdprompt_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:textColor="#551A8B"
+        android:textSize="15sp"
+        android:text="Your Attendance Details :"/>
+
+    <!-- Emp Name -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2sp"
+        android:paddingBottom="10sp">
+        <ImageView
+            android:id="@+id/myaa_empname_Iv"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/person"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:id="@+id/myaa_empname_Tv"
+            android:layout_marginLeft="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/purplishDark"
+            android:layout_toRightOf="@id/myaa_empname_Iv"
+            android:layout_marginTop="10sp"
+            android:layout_alignBaseline="@id/myaa_empname_Iv"/>
+    </RelativeLayout>
+    <!-- Current Date/Time -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2sp"
+        android:paddingBottom="10sp">
+        <ImageView
+            android:id="@+id/myaa_datetime_Iv"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/datetime"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:id="@+id/myaa_datetime_Tv"
+            android:layout_marginLeft="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/purplishDark"
+            android:layout_toRightOf="@id/myaa_datetime_Iv"
+            android:layout_marginTop="10sp"
+            android:layout_alignBaseline="@id/myaa_datetime_Iv"/>
+    </RelativeLayout>
+    <!-- Location -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2sp"
+        android:paddingBottom="10sp">
+        <ImageView
+            android:id="@+id/myaa_location_Iv"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/location"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:id="@+id/myaa_location_Tv"
+            android:layout_marginLeft="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/blue"
+            android:text="Detecting Location... Please wait..."
+            android:layout_toRightOf="@id/myaa_location_Iv"
+            android:layout_marginTop="10sp"
+            android:maxLines="6"
+            android:layout_alignBaseline="@id/myaa_location_Iv"/>
+    </RelativeLayout>
+
+    <!-- QR Scan Button -->
+    <Button
+        android:id="@+id/myaa_scanQR_Btn"
+        android:layout_width="250sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="20sp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/bluegray"
+        android:drawablePadding="10sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="5sp"
+        android:visibility="gone"
+        android:drawableLeft="@drawable/qricon"
+        android:textColor="@color/white"
+        android:text="Scan Store QR Code"/>
+    <!-- Store QR Code -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2sp"
+        android:paddingBottom="10sp">
+        <ImageView
+            android:id="@+id/myaa_storeQR_Iv"
+            android:layout_width="25sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/qricon"
+            android:visibility="gone"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:id="@+id/myaa_storeQR_Tv"
+            android:layout_marginLeft="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/purplishDark"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/myaa_storeQR_Iv"
+            android:layout_marginTop="10sp"
+            android:maxLines="5"
+            android:layout_alignBaseline="@id/myaa_storeQR_Iv"/>
+    </RelativeLayout>
+
+
+    <!-- Check-in & Check-out Buttons -->
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/myaa_in_Btn"
+            android:layout_width="95sp"
+            android:layout_height="35sp"
+            android:layout_marginTop="40sp"
+            android:layout_marginLeft="70sp"
+            android:layout_alignParentStart="true"
+            android:background="@color/limegreen"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:text="Punch-IN"/>
+
+        <Button
+            android:id="@+id/myaa_out_Btn"
+            android:layout_width="95sp"
+            android:layout_height="35sp"
+            android:layout_marginTop="40sp"
+            android:layout_marginLeft="12sp"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:text="Punch-OUT"
+            android:layout_toRightOf="@id/myaa_in_Btn"/>
+    </RelativeLayout>
+
+    <!-- Error Status -->
+    <TextView
+        android:id="@+id/myaa_errStatus_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginTop="25sp"
+        android:layout_gravity="bottom"
+        android:maxLines="4"
+        android:padding="5sp"
+        android:background="@color/red"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <!-- Background Thread Progress Bar-->
+    <ProgressBar
+        android:id="@+id/myaa_getLocProgress_Pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10sp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/purplishDark"
+        style="@style/Widget.AppCompat.ProgressBar"/>
+
+
+</LinearLayout>
+    </ScrollView>

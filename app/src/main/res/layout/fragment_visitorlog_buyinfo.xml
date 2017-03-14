@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:fitsSystemWindows="true"
+        tools:context=".VisitorLogPDetailsFragment">
+
+        <TextView
+            android:id="@+id/fvlbi_purchase_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="5sp"
+            android:textColor="#551A8B"
+            android:textSize="18sp"
+            android:text="Purchase Consideration :"/>
+
+        <!-- Buyer Timeframe -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="8sp">
+
+            <TextView
+                android:id="@+id/fvlbi_buytf_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="5sp"
+                android:text="Timeframe:"/>
+
+            <RadioGroup
+                android:id="@+id/fvlbi_buyTimeFm_RadioGrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/fvlbi_buytf_Tv">
+                <RadioButton
+                    android:id="@+id/fvlbi_SHT_RadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SHORT"
+                    android:buttonTint="@color/purplishDark"/>
+                <RadioButton
+                    android:id="@+id/fvlbi_MED_RadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MEDIUM"
+                    android:buttonTint="@color/purplishDark"/>
+                <RadioButton
+                    android:id="@+id/fvlbi_LNG_RadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LONG"
+                    android:buttonTint="@color/purplishDark"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+        <!-- Budget -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="17sp">
+            <TextView
+                android:id="@+id/fvlbi_budget_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Budget(INR) :"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/fvlbi_budmin_Et"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:maxLength="7"
+                android:inputType="number"
+                android:hint="MIN"
+                android:textAlignment="center"
+                android:layout_marginLeft="7sp"
+                android:backgroundTint="@color/purplishDark"
+                android:imeOptions="actionNext"
+                android:layout_alignBaseline="@id/fvlbi_budget_Tv"
+                android:layout_toRightOf="@id/fvlbi_budget_Tv"/>
+            <TextView
+                android:id="@+id/fvlbi_budgetdash_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - "
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/fvlbi_budmin_Et"/>
+            <EditText
+                android:id="@+id/fvlbi_budmax_Et"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:maxLength="7"
+                android:inputType="number"
+                android:hint="MAX"
+                android:textAlignment="center"
+                android:backgroundTint="@color/purplishDark"
+                android:layout_alignBaseline="@id/fvlbi_budget_Tv"
+                android:focusableInTouchMode="true"
+                android:imeOptions="actionNext|flagNavigateNext"
+                android:layout_toRightOf="@id/fvlbi_budgetdash_Tv"/>
+        </RelativeLayout>
+
+        <!-- Comments -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="17sp">
+            <TextView
+                android:id="@+id/fvlbi_comm_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comments :"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/fvlbi_comm_Et"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:inputType="textImeMultiLine|textCapSentences"
+                android:lines="2"
+                android:maxLines="4"
+                android:maxLength="200"
+                android:layout_marginTop="4sp"
+                android:layout_marginLeft="5sp"
+                android:padding="5sp"
+                android:gravity="start"
+                android:imeOptions="actionDone"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/edittext_border"
+                android:layout_below="@id/fvlbi_comm_Tv"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/fvlbi_next_Btn"
+            android:layout_width="90sp"
+            android:layout_height="35sp"
+            android:layout_marginTop="20sp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/purplishDark"
+            android:textColor="@color/purplishLight"
+            android:text="SUBMIT"/>
+
+        <TextView
+            android:id="@+id/fvlbi_stepcount_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="5sp"
+            android:layout_gravity="end"
+            android:text="... Step 3 Of 3 "/>
+    </LinearLayout>
+</ScrollView>

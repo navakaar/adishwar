@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/asl_scrollview"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:focusableInTouchMode="true"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Page title -->
+            <ImageView
+                android:id="@+id/asl_sales_log_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/sales_log"/>
+            <TextView
+                android:id="@+id/asl_sales_log_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sales Log "
+                android:textSize="22sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#551A8B"
+                android:layout_below="@id/asl_sales_log_Iv"/>
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20sp" />
+
+        <!-- Customer details -->
+        <TextView
+            android:id="@+id/asl_cusdetails_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Details"/>
+
+        <!-- Customer Name -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="4sp">
+            <TextView
+                android:id="@+id/asl_cname_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name :"/>
+            <EditText
+                android:id="@+id/asl_cname_Et"
+                android:layout_width="180sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:maxLength="32"
+                android:inputType="textPersonName|textCapCharacters"
+                android:layout_alignBaseline="@id/asl_cname_Tv"
+                android:backgroundTint="@color/purplishDark"
+                android:layout_toRightOf="@id/asl_cname_Tv"/>
+        </RelativeLayout>
+
+        <!-- Customer Phone -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="4sp">
+            <TextView
+                android:id="@+id/asl_cphone_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile No. :"/>
+            <EditText
+                android:id="@+id/asl_cphone_Et"
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                android:layout_marginLeft="4sp"
+                android:paddingLeft="5sp"
+                android:inputType="number"
+                android:layout_alignBaseline="@id/asl_cphone_Tv"
+                android:backgroundTint="@color/purplishDark"
+                android:layout_toRightOf="@id/asl_cphone_Tv" />
+        </RelativeLayout>
+
+        <!-- Product Sold -->
+        <TextView
+            android:id="@+id/asl_prodSold_Tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="4sp"
+            android:text="Product(s) Sold" />
+
+        <!-- Product Code -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="8sp">
+            <TextView
+                android:id="@+id/asl_prodcod_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=  "Product Code(s) :"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/asl_prodcod_Et"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:maxLength="70"
+                android:hint="43UF640T, RT28K3322S8"
+                android:textColorHint="#A9A9A9"
+                android:inputType="textCapCharacters|textNoSuggestions"
+                android:backgroundTint="@color/purplishDark"
+                android:layout_below="@id/asl_prodcod_Tv"/>
+        </RelativeLayout>
+
+        <!-- Billing Details -->
+        <TextView
+            android:id="@+id/asl_billdetails_Tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="4sp"
+            android:text="Billing Details" />
+        <!-- Bill No -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="8sp">
+            <TextView
+                android:id="@+id/asl_billno_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill No :"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/asl_billno_Et"
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:maxLength="12"
+                android:layout_marginLeft="4sp"
+                android:paddingLeft="5sp"
+                android:inputType="number"
+                android:backgroundTint="@color/purplishDark"
+                android:layout_alignBaseline="@id/asl_billno_Tv"
+                android:layout_toRightOf="@id/asl_billno_Tv"/>
+        </RelativeLayout>
+        <!-- Bill Date -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="8sp">
+            <TextView
+                android:id="@+id/asl_billdtt_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill Date :"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/asl_billdt_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5sp"
+                android:padding="5sp"
+                android:clickable="true"
+                android:textColor="#808080"
+                android:backgroundTint="@color/purplishDark"
+                android:layout_alignBaseline="@id/asl_billdtt_Tv"
+                android:layout_toRightOf="@id/asl_billdtt_Tv"/>
+        </RelativeLayout>
+
+        <!-- Bill Amount -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginTop="8sp">
+            <TextView
+                android:id="@+id/asl_billamt_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill Amount :"/>
+            <EditText
+                android:id="@+id/asl_billamt_Et"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginLeft="4sp"
+                android:paddingLeft="5sp"
+                android:padding="5sp"
+                android:backgroundTint="@color/purplishDark"
+                android:layout_alignBaseline="@id/asl_billamt_Tv"
+                android:layout_toRightOf="@id/asl_billamt_Tv"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/asl_submit_Btn"
+            android:layout_width="120sp"
+            android:layout_height="40sp"
+            android:layout_marginTop="20sp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/purplishDark"
+            android:textColor="@color/purplishLight"
+            android:text="SUBMIT"/>
+
+        <ProgressBar
+            android:id="@+id/asl_progress_Pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10sp"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/purplishDark"
+            style="@style/Widget.AppCompat.ProgressBar"/>
+
+    </LinearLayout>
+</ScrollView>

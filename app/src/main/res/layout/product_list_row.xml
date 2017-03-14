@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.v7.widget.CardView
+    android:id="@+id/plr_prodCardView"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        xmlns:app="http://schemas.android.com/tools"
+        android:layout_marginBottom="7dp"
+        app:cardConerRadius="2dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+            android:id="@+id/plr_prodname_Tv"
+            android:textColor="@color/title"
+            android:textSize="16dp"
+                android:paddingTop="3sp"
+                android:paddingLeft="3sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+            <TextView
+            android:id="@+id/plr_proddesc_Tv"
+            android:layout_below="@id/product_name_Tv"
+                android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:padding="3sp"/>
+            <TextView
+            android:id="@+id/plr_mrp_Tv"
+            android:textColor="@color/year"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+                android:paddingTop="3sp"
+                android:paddingRight="3sp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>

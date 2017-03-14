@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/asl_scrollview"
+    android:background="@color/purplishLight"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purplishLight"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".StockCheckActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Page title -->
+            <ImageView
+                android:id="@+id/asc_stkchk_Iv"
+                android:layout_width="100sp"
+                android:layout_height="70sp"
+                android:padding="5sp"
+                android:elevation="5sp"
+                android:fadingEdgeLength="5sp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/stock_check"/>
+            <TextView
+                android:id="@+id/asc_stkchk_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stock Check "
+                android:textSize="22sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#551A8B"
+                android:layout_below="@id/asc_stkchk_Iv"/>
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20sp" />
+
+        <!-- Product details -->
+        <TextView
+            android:id="@+id/asc_searchheader_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Details"/>
+
+        <!-- Product Code -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="4sp">
+            <TextView
+                android:id="@+id/asc_pcode_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Code :"/>
+            <EditText
+                android:id="@+id/asc_pcode_Et"
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:maxLength="32"
+                android:inputType="textCapCharacters"
+                android:layout_alignBaseline="@id/asc_pcode_Tv"
+                android:backgroundTint="@color/purplishDark"
+                android:layout_toRightOf="@id/asc_pcode_Tv"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/asc_submit_Btn"
+            android:layout_width="170sp"
+            android:layout_height="35sp"
+            android:layout_marginTop="30sp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/purplishDark"
+            android:textColor="@color/purplishLight"
+            android:text="CHECK AVAILABILITY"/>
+
+        <!-- Product details -->
+        <TextView
+            android:id="@+id/asc_proddetailsheader_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55sp"
+            android:text="Product Details :"
+            android:visibility="invisible"
+            android:textColor="@color/bluegray"/>
+
+        <TextView
+            android:id="@+id/asc_proddetails1_Tv"
+            android:layout_marginTop="8sp"
+            android:paddingLeft="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Type : CA > Refrigerator > Frost Free"
+            android:visibility="invisible"
+            android:layout_gravity="start"
+            android:textColor="@color/bluegray"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/asc_proddetails2_Tv"
+            android:layout_marginTop="8sp"
+            android:paddingLeft="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Code : "
+            android:visibility="invisible"
+            android:layout_gravity="start"
+            android:textColor="@color/bluegray"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/asc_stockstatus_Tv"
+            android:layout_marginTop="8sp"
+            android:paddingLeft="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Availability : Item IN-STOCK"
+            android:visibility="invisible"
+            android:layout_gravity="start"
+            android:textSize="13sp"
+            android:textColor="@color/bluegray"/>
+
+        <TextView
+            android:id="@+id/asc_proddetails3_Tv"
+            android:layout_marginTop="8sp"
+            android:paddingLeft="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Available Details : \n  12 Units - Warehouse (Mysore Road, Bengaluru)\n  5 (Display Units) - Bangalore Stores "
+            android:visibility="invisible"
+            android:layout_gravity="start"
+            android:textColor="@color/bluegray"
+            android:textSize="13sp"/>
+    </LinearLayout>
+</ScrollView>
